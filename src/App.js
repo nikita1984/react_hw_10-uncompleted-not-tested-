@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+/*
 export const firebaseConfig = {
   apiKey: "AIzaSyANtBaeDjrPPzY6TIrjq8CMvSB3Az5agL0",
   authDomain: "gb-react-project-350cd.firebaseapp.com",
@@ -27,6 +28,17 @@ export const firebaseConfig = {
   storageBucket: "gb-react-project-350cd.appspot.com",
   messagingSenderId: "524675586930",
   appId: "1:524675586930:web:571c4afa11c8f74e439beb",
+};
+*/
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyDm1wj26rbNxj0bVjxCKFEFz_gwdNjt_3w",
+  authDomain: "firstfirebaseproject-28a85.firebaseapp.com",
+  databaseURL: "https://firstfirebaseproject-28a85-default-rtdb.firebaseio.com",
+  projectId: "firstfirebaseproject-28a85",
+  storageBucket: "firstfirebaseproject-28a85.appspot.com",
+  messagingSenderId: "433394342251",
+  appId: "1:433394342251:web:81ac7881b103624e73142e"
 };
 
 firebase.initializeApp(firebaseConfig);

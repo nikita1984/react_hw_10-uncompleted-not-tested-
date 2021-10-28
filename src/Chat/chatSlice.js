@@ -7,18 +7,7 @@ export const chatSlice = createSlice({
     isAuthenticated: false,
     myUid: "",
     messages: {},
-    chats: {
-      // {
-      //   id: 2,
-      //   name: "Joe Doe",
-      //   avatar: "https://material-ui.com/static/images/avatar/1.jpg",
-      // },
-      // {
-      //   id: 3,
-      //   name: "Иван Кузнецов",
-      //   avatar: "https://material-ui.com/static/images/avatar/2.jpg",
-      // },
-    },
+    chats: {},
   },
   reducers: {
     addMessage: (state, action) => {

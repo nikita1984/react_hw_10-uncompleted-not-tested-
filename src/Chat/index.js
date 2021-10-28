@@ -28,7 +28,14 @@ function Chat() {
   const urlParams = useParams();
   const targetUId = urlParams.id;
   const chats = useSelector((state) => state.chat.chats);
-  const targetProfileId = Object.keys(chats).find((profileId) => profileId);
+  // console.log(chats);
+  
+  // const targetProfileId = Object.keys(chats).find((profileId) => profileId);
+  const targetProfileId = targetUId;
+
+  // const targetProfileIdUpd = targetUId;
+  console.log(targetProfileId, "targetProfileId");
+  // console.log(targetProfileIdUpd, "targetProfileIdUpd");
 
   const chatId = chats[targetProfileId] ? chats[targetProfileId].chatId : null;
 

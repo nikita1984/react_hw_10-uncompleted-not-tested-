@@ -10,7 +10,7 @@ const getPayloadFromSnapshot = (snapshot) => {
   //     messages.push(mes.val());
   //   });
 
-  console.log(snapshot.val(), "VAL");
+  // console.log(snapshot.val(), "VAL");
 
   return { [snapshot.key]: snapshot.val() };
 };
