@@ -17,3 +17,11 @@
 		}
 	}
 }
+
+/*
+
+logins (profiles): testUser1@mail.ru, testUser2@mail.ru, nikitabessonov.ru@gmail.ru,
+pwd: 12312312
+
+
+*/
