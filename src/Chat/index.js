@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import MessageList from "./MessageList";
-import MessageInput from "./MessageInput";
+import Chat from "./Chat";
 import { makeStyles } from "@material-ui/core/styles";
 import { useParams } from "react-router-dom";
 import { sendMessageWithThunk, initMessageTracking } from "./actions";
@@ -24,19 +23,11 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Chat() {
+function ChatContainer() {
   const urlParams = useParams();
   const targetUId = urlParams.id;
   const chats = useSelector((state) => state.chat.chats);
-  // console.log(chats);
-  
-  // const targetProfileId = Object.keys(chats).find((profileId) => profileId);
   const targetProfileId = targetUId;
-
-  // const targetProfileIdUpd = targetUId;
-  console.log(targetProfileId, "targetProfileId");
-  // console.log(targetProfileIdUpd, "targetProfileIdUpd");
-
   const chatId = chats[targetProfileId] ? chats[targetProfileId].chatId : null;
 
   const messages = useSelector((state) => state.chat.messages[chatId]);
@@ -67,14 +58,7 @@ function Chat() {
     return <div>Ошибка, нет собеседника</div>;
   }
 
-  return (
-    <div className={classes.chatWrapper}>
-      <div className={classes.componentWrapper}>
-        <MessageList messagesArray={messages} />
-        <MessageInput onSendMessage={onSendMessage} />
-      </div>
-    </div>
-  );
+  return <Chat  classes={classes} messages={messages} onSendMessage={onSendMessage} />;
 }
 
-export default Chat;
+export default ChatContainer;
